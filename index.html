@@ -51,8 +51,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 	function illnessOutcome(){
 		var resultText = document.getElementById("results");
-		var allergyPercentage = (allergy_count/4)*100;
-		var coldPercentage = (cold_count/4)*100;
+		var allergyPercentage = (allergy_count/6)*100;
+		var coldPercentage = (cold_count/6)*100;
 		var results = resultText.innerHTML = "Probability it is allergies =" + allergyPercentage + "%" + "<br> Probability it is a cold =" + coldPercentage + "%";
 	}
 		
@@ -149,13 +149,37 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have general aches and pains?</p>
+		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Here, I am adding buttons. The #six makes it turn to the next page after someone clicks the button-->
+         	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	</div>
+</div>	
+
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is your mucus clear with no green/yellow tint?</p>
+		<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--Here, I am adding buttons. The #seven makes it turn to the next page after someone clicks the button-->
+         	<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div>
+</div>	
+	
+<div class="page" id="seven">
+	<div class="w3-container w3-flat-carrot">
 		<h1>Click below for your diagnosis</h1>
 	</div>
 	<div id="content" class="w3-container">
-		<a href="#six"  onclick="illnessOutcome();" class="w3-btn w3-black">Result</a>
+		<a href="#eight"  onclick="illnessOutcome();" class="w3-btn w3-black">Result</a>
 	</div>
 </div>	
-<div class="page" id="six">
+<div class="page" id="eight">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Hope this helped!</h1>
 	</div>
