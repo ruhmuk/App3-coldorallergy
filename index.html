@@ -131,7 +131,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
 		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Here, I am adding buttons. The #four makes it turn to the next page after someone clicks the button-->
-         	<a href="#fouR"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>	
 
@@ -149,10 +149,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="five">
 	<div id="content" class="w3-container">
-		<a href="#six"  onclick="illnessOutcome();" class="w3-btn w3-black">Results</a>
-		<p id="results">resultText.innerHTML = "Probability it is allergies =" + allergyPercentage + "%" + "<br> Probability it is a cold =" + coldPercentage + "%";</p>
+		<a href="#six"  onclick="illnessOutcome();" class="w3-btn w3-black">Result</a>
 	</div>
 </div>	
+<div class="page" id="six">
+	<div id="content" class="w3-container">
+		<p id="results">resultText.innerHTML = "Probability it is allergies =" + allergyPercentage + "%" + "<br> Probability it is a cold =" + coldPercentage + "%";</p>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
