@@ -49,6 +49,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	function illnessOutcome(){
+		var resultText = document.getElementById("results");
+		var allergyPercentage = (allergy_count/4)*100;
+		var coldPercentage = (cold_count/4)*100;
+	}
+		
+
 
   </script>
 
@@ -136,6 +143,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chronic?</p>
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--Here, I am adding buttons. The #five makes it turn to the next page after someone clicks the button-->
          	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div>
+</div>	
+
+<div class="page" id="five">
+	<div id="content" class="w3-container">
+		<a href="#six"  onclick="illnessOutcome();" class="w3-btn w3-black">Results</a>
+		<p id="results">resultText.innerHTML = "Probability it is allergies =" + allergyPercentage + "%" + "<br> Probability it is a cold =" + coldPercentage + "%";</p>
 	</div>
 </div>	
 
